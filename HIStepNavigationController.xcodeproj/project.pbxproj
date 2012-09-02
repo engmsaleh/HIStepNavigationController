@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B41C97C15F3604B001CEC30 /* HISThirdStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41C97B15F3604B001CEC30 /* HISThirdStepViewController.m */; };
 		6B8A756D15F341B9001D7EB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8A756C15F341B9001D7EB4 /* UIKit.framework */; };
 		6B8A756F15F341B9001D7EB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8A756E15F341B9001D7EB4 /* Foundation.framework */; };
 		6B8A757115F341B9001D7EB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8A757015F341B9001D7EB4 /* CoreGraphics.framework */; };
 		6B8A757715F341B9001D7EB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A757515F341B9001D7EB4 /* InfoPlist.strings */; };
 		6B8A757915F341B9001D7EB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A757815F341B9001D7EB4 /* main.m */; };
-		6B8A757D15F341BA001D7EB4 /* HISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A757C15F341BA001D7EB4 /* HISAppDelegate.m */; };
+		6B8A758A15F3421B001D7EB4 /* HISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A758915F3421B001D7EB4 /* HISAppDelegate.m */; };
+		6B8A758F15F3426D001D7EB4 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A758E15F3426D001D7EB4 /* iPhone.storyboard */; };
+		6B8A759315F342F8001D7EB4 /* HISteppingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A759215F342F8001D7EB4 /* HISteppingNavigationController.m */; };
+		6B8A75CF15F34B3A001D7EB4 /* HISFirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A75CE15F34B3A001D7EB4 /* HISFirstStepViewController.m */; };
+		6B8A75D515F34C1C001D7EB4 /* HISNavigationBar_Indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75D115F34C1C001D7EB4 /* HISNavigationBar_Indicator.png */; };
+		6B8A75D615F34C1C001D7EB4 /* HISNavigationBar_Indicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75D215F34C1C001D7EB4 /* HISNavigationBar_Indicator@2x.png */; };
+		6B8A75D715F34C1C001D7EB4 /* HISNavigationController_Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75D315F34C1C001D7EB4 /* HISNavigationController_Bg.png */; };
+		6B8A75D815F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75D415F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png */; };
+		6B8A75DB15F34F61001D7EB4 /* HISSecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A75DA15F34F61001D7EB4 /* HISSecondStepViewController.m */; };
+		6B8A75E215F355D6001D7EB4 /* ProgoressBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75E015F355D6001D7EB4 /* ProgoressBar.png */; };
+		6B8A75E315F355D6001D7EB4 /* ProgoressBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75E115F355D6001D7EB4 /* ProgoressBar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B41C97A15F3604B001CEC30 /* HISThirdStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISThirdStepViewController.h; path = Classes/ViewControllers/HISThirdStepViewController.h; sourceTree = "<group>"; };
+		6B41C97B15F3604B001CEC30 /* HISThirdStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISThirdStepViewController.m; path = Classes/ViewControllers/HISThirdStepViewController.m; sourceTree = "<group>"; };
 		6B8A756815F341B9001D7EB4 /* HIStepNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIStepNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B8A756C15F341B9001D7EB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6B8A756E15F341B9001D7EB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -24,8 +37,21 @@
 		6B8A757615F341B9001D7EB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B8A757815F341B9001D7EB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B8A757A15F341B9001D7EB4 /* HIStepNavigationController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HIStepNavigationController-Prefix.pch"; sourceTree = "<group>"; };
-		6B8A757B15F341BA001D7EB4 /* HISAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HISAppDelegate.h; sourceTree = "<group>"; };
-		6B8A757C15F341BA001D7EB4 /* HISAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HISAppDelegate.m; sourceTree = "<group>"; };
+		6B8A758815F3421B001D7EB4 /* HISAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISAppDelegate.h; path = Classes/AppDelegate/HISAppDelegate.h; sourceTree = "<group>"; };
+		6B8A758915F3421B001D7EB4 /* HISAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISAppDelegate.m; path = Classes/AppDelegate/HISAppDelegate.m; sourceTree = "<group>"; };
+		6B8A758E15F3426D001D7EB4 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = Resources/iPhone.storyboard; sourceTree = "<group>"; };
+		6B8A759115F342F8001D7EB4 /* HISteppingNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISteppingNavigationController.h; path = Vendor/HISteppingNavigationController/HISteppingNavigationController.h; sourceTree = "<group>"; };
+		6B8A759215F342F8001D7EB4 /* HISteppingNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISteppingNavigationController.m; path = Vendor/HISteppingNavigationController/HISteppingNavigationController.m; sourceTree = "<group>"; };
+		6B8A75CD15F34B3A001D7EB4 /* HISFirstStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISFirstStepViewController.h; path = Classes/ViewControllers/HISFirstStepViewController.h; sourceTree = "<group>"; };
+		6B8A75CE15F34B3A001D7EB4 /* HISFirstStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISFirstStepViewController.m; path = Classes/ViewControllers/HISFirstStepViewController.m; sourceTree = "<group>"; };
+		6B8A75D115F34C1C001D7EB4 /* HISNavigationBar_Indicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HISNavigationBar_Indicator.png; path = Vendor/HISteppingNavigationController/Resources/Images/HISNavigationBar_Indicator.png; sourceTree = "<group>"; };
+		6B8A75D215F34C1C001D7EB4 /* HISNavigationBar_Indicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HISNavigationBar_Indicator@2x.png"; path = "Vendor/HISteppingNavigationController/Resources/Images/HISNavigationBar_Indicator@2x.png"; sourceTree = "<group>"; };
+		6B8A75D315F34C1C001D7EB4 /* HISNavigationController_Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HISNavigationController_Bg.png; path = Vendor/HISteppingNavigationController/Resources/Images/HISNavigationController_Bg.png; sourceTree = "<group>"; };
+		6B8A75D415F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HISNavigationController_Bg@2x.png"; path = "Vendor/HISteppingNavigationController/Resources/Images/HISNavigationController_Bg@2x.png"; sourceTree = "<group>"; };
+		6B8A75D915F34F61001D7EB4 /* HISSecondStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HISSecondStepViewController.h; path = Classes/ViewControllers/HISSecondStepViewController.h; sourceTree = "<group>"; };
+		6B8A75DA15F34F61001D7EB4 /* HISSecondStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISSecondStepViewController.m; path = Classes/ViewControllers/HISSecondStepViewController.m; sourceTree = "<group>"; };
+		6B8A75E015F355D6001D7EB4 /* ProgoressBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProgoressBar.png; path = Vendor/HISteppingNavigationController/Resources/Images/ProgoressBar.png; sourceTree = "<group>"; };
+		6B8A75E115F355D6001D7EB4 /* ProgoressBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ProgoressBar@2x.png"; path = "Vendor/HISteppingNavigationController/Resources/Images/ProgoressBar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				6B8A757215F341B9001D7EB4 /* HIStepNavigationController */,
+				6B8A758D15F34249001D7EB4 /* Vendor */,
 				6B8A756B15F341B9001D7EB4 /* Frameworks */,
 				6B8A756915F341B9001D7EB4 /* Products */,
 			);
@@ -72,8 +99,10 @@
 		6B8A757215F341B9001D7EB4 /* HIStepNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				6B8A757B15F341BA001D7EB4 /* HISAppDelegate.h */,
-				6B8A757C15F341BA001D7EB4 /* HISAppDelegate.m */,
+				6B8A75CB15F34B10001D7EB4 /* ViewControllers */,
+				6B8A759015F34270001D7EB4 /* Resources */,
+				6B8A758B15F3421E001D7EB4 /* AppDelegate */,
+				6B8A758C15F34229001D7EB4 /* ViewControllers */,
 				6B8A757315F341B9001D7EB4 /* Supporting Files */,
 			);
 			path = HIStepNavigationController;
@@ -88,6 +117,75 @@
 				6B8A757A15F341B9001D7EB4 /* HIStepNavigationController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B8A758B15F3421E001D7EB4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A758815F3421B001D7EB4 /* HISAppDelegate.h */,
+				6B8A758915F3421B001D7EB4 /* HISAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6B8A758C15F34229001D7EB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		6B8A758D15F34249001D7EB4 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A759415F342FE001D7EB4 /* HISteppingNavigationController */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		6B8A759015F34270001D7EB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A758E15F3426D001D7EB4 /* iPhone.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6B8A759415F342FE001D7EB4 /* HISteppingNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A759115F342F8001D7EB4 /* HISteppingNavigationController.h */,
+				6B8A759215F342F8001D7EB4 /* HISteppingNavigationController.m */,
+				6B8A75D015F34BF5001D7EB4 /* Resources */,
+			);
+			name = HISteppingNavigationController;
+			sourceTree = "<group>";
+		};
+		6B8A75CB15F34B10001D7EB4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A75CD15F34B3A001D7EB4 /* HISFirstStepViewController.h */,
+				6B8A75CE15F34B3A001D7EB4 /* HISFirstStepViewController.m */,
+				6B8A75D915F34F61001D7EB4 /* HISSecondStepViewController.h */,
+				6B8A75DA15F34F61001D7EB4 /* HISSecondStepViewController.m */,
+				6B41C97A15F3604B001CEC30 /* HISThirdStepViewController.h */,
+				6B41C97B15F3604B001CEC30 /* HISThirdStepViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B8A75D015F34BF5001D7EB4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B8A75E015F355D6001D7EB4 /* ProgoressBar.png */,
+				6B8A75E115F355D6001D7EB4 /* ProgoressBar@2x.png */,
+				6B8A75D115F34C1C001D7EB4 /* HISNavigationBar_Indicator.png */,
+				6B8A75D215F34C1C001D7EB4 /* HISNavigationBar_Indicator@2x.png */,
+				6B8A75D315F34C1C001D7EB4 /* HISNavigationController_Bg.png */,
+				6B8A75D415F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +241,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8A757715F341B9001D7EB4 /* InfoPlist.strings in Resources */,
+				6B8A758F15F3426D001D7EB4 /* iPhone.storyboard in Resources */,
+				6B8A75D515F34C1C001D7EB4 /* HISNavigationBar_Indicator.png in Resources */,
+				6B8A75D615F34C1C001D7EB4 /* HISNavigationBar_Indicator@2x.png in Resources */,
+				6B8A75D715F34C1C001D7EB4 /* HISNavigationController_Bg.png in Resources */,
+				6B8A75D815F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png in Resources */,
+				6B8A75E215F355D6001D7EB4 /* ProgoressBar.png in Resources */,
+				6B8A75E315F355D6001D7EB4 /* ProgoressBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8A757915F341B9001D7EB4 /* main.m in Sources */,
-				6B8A757D15F341BA001D7EB4 /* HISAppDelegate.m in Sources */,
+				6B8A758A15F3421B001D7EB4 /* HISAppDelegate.m in Sources */,
+				6B8A759315F342F8001D7EB4 /* HISteppingNavigationController.m in Sources */,
+				6B8A75CF15F34B3A001D7EB4 /* HISFirstStepViewController.m in Sources */,
+				6B8A75DB15F34F61001D7EB4 /* HISSecondStepViewController.m in Sources */,
+				6B41C97C15F3604B001CEC30 /* HISThirdStepViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +337,7 @@
 				GCC_PREFIX_HEADER = "HIStepNavigationController/HIStepNavigationController-Prefix.pch";
 				INFOPLIST_FILE = "HIStepNavigationController/HIStepNavigationController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Vendor/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -239,6 +349,7 @@
 				GCC_PREFIX_HEADER = "HIStepNavigationController/HIStepNavigationController-Prefix.pch";
 				INFOPLIST_FILE = "HIStepNavigationController/HIStepNavigationController-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Vendor/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -262,6 +373,7 @@
 				6B8A758215F341BA001D7EB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
