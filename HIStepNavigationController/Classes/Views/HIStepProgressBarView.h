@@ -23,6 +23,9 @@ typedef enum HISCurrentStep HISCurrentStep;
 @property (strong, nonatomic) UIColor *defaultLabelColor;
 @property (strong, nonatomic) UIColor *currentLabelColor;
 
+- (void)progressNextStep;
+- (void)progressPreviousStep;
+
 - (void)progressBarToStep:(HISCurrentStep)step completion:(void (^)(void))handler;
 
 @end

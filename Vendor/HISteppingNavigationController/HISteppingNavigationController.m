@@ -145,6 +145,7 @@
                      CGRect cvcRect = currentViewController.view.frame;
                      cvcRect.origin.x = -320.0;
                      currentViewController.view.frame = cvcRect;
+                     [self.progressBarView progressNextStep];
                    }
                    completion:^(BOOL finished){
                      [currentViewController.view removeFromSuperview];
@@ -177,6 +178,7 @@
                      
                      pvcRect.origin.x = 0.0;
                      previousViewController.view.frame = pvcRect;
+                     [self.progressBarView progressPreviousStep];
                    }
                    completion:^(BOOL finished){
                      [currentViewController.view removeFromSuperview];

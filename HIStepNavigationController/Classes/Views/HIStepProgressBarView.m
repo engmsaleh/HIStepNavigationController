@@ -21,8 +21,8 @@
 - (void)_setupStepButtons;
 - (void)_setupLayers;
 
-- (CGPathRef)_guagePathInRect:(CGRect)rect;
-- (CGPathRef)_guageMaskPathInRect:(CGRect)rect progress:(CGFloat)progress;
+- (CGPathRef)_guagePath;
+- (CGPathRef)_guageMaskPathWithProgress:(CGFloat)progress;
 
 - (void)_updateStepLabelAndDot;
 - (void)_switchCurrentStepLabel:(HISCurrentStep)step;
@@ -104,7 +104,7 @@
 - (void)_setupLayers
 {
   CGRect rect = self.frame;
-  CGPathRef path = [self _guagePathInRect:CGRectZero];
+  CGPathRef path = [self _guagePath];
  
   // Base
   CAShapeLayer *baseLayer = [CAShapeLayer layer];
@@ -126,7 +126,7 @@
   self.guageLayer.path = path;
   
   // Guage mask
-  CGPathRef maskPath = [self _guageMaskPathInRect:CGRectZero progress:[self _progressForStep:_currentStep]];
+  CGPathRef maskPath = [self _guageMaskPathWithProgress:[self _progressForStep:_currentStep]];
   self.guageMaskLayer = [CAShapeLayer layer];
   self.guageMaskLayer.frame = CGRectMake(15.0, 29.0, CGRectGetWidth(rect), CGRectGetHeight(rect));
   self.guageMaskLayer.fillColor = [[UIColor blackColor]  CGColor];
@@ -153,24 +153,21 @@
   CGPathRelease(dotPath);
 }
 
-- (CGPathRef)_guagePathInRect:(CGRect)rect
+- (CGPathRef)_guagePath
 {
-  CGFloat oX = rect.origin.x;
-  CGFloat oY = rect.origin.y;
-  
   // Draw Path
   // -------------------------------------------------------------------------
   // top-left     : ( 17.5, 33.0) : top-right    : (302.5, 33.0)
   // bottom-left  : ( 17.5, 33.0) : bottom-right : (302.5, 39.0)
   CGMutablePathRef guagePath = CGPathCreateMutable();
-  CGPathMoveToPoint(guagePath, NULL, oX+17.5, oY+33.0); // top-left
-  CGPathAddLineToPoint(guagePath, NULL, oX+302.5, oY+33.0); // top-right
-  CGPathAddArcToPoint(guagePath, NULL, oX+305.0, oY+33.0, oX+305, oY+36.0, 3.0);
-  CGPathAddArcToPoint(guagePath, NULL, oX+305.0, oY+39.0, oX+302.5, oY+39.0, 3.0);
-  CGPathAddLineToPoint(guagePath, NULL, oX+302.5, oY+39.0); // bottom-right
-  CGPathAddLineToPoint(guagePath, NULL, oX+17.5, oY+39.0);  // bottom-left
-  CGPathAddArcToPoint(guagePath, NULL, oX+15.0, oY+39.0, oX+15.0, oY+36.0, 3.0);
-  CGPathAddArcToPoint(guagePath, NULL, oX+15.0, oY+33.0, oX+17.5, oY+33.0, 3.0);
+  CGPathMoveToPoint(guagePath, NULL, 17.5, 33.0); // top-left
+  CGPathAddLineToPoint(guagePath, NULL, 302.5, 33.0); // top-right
+  CGPathAddArcToPoint(guagePath, NULL, 305.0, 33.0, 305, 36.0, 3.0);
+  CGPathAddArcToPoint(guagePath, NULL, 305.0, 39.0, 302.5, 39.0, 3.0);
+  CGPathAddLineToPoint(guagePath, NULL, 302.5, 39.0); // bottom-right
+  CGPathAddLineToPoint(guagePath, NULL, 17.5, 39.0);  // bottom-left
+  CGPathAddArcToPoint(guagePath, NULL, 15.0, 39.0, 15.0, 36.0, 3.0);
+  CGPathAddArcToPoint(guagePath, NULL, 15.0, 33.0, 17.5, 33.0, 3.0);
   CGPathCloseSubpath(guagePath);
   
   // add Step Circles
@@ -181,36 +178,49 @@
   return guagePath;
 }
 
-- (CGPathRef)_guageMaskPathInRect:(CGRect)rect progress:(CGFloat)progress
+- (CGPathRef)_guageMaskPathWithProgress:(CGFloat)progress;
 {
   CGFloat radius = 6.25;
-  CGFloat oX = rect.origin.x;
-  CGFloat oY = rect.origin.y;
   
   CGMutablePathRef maskPath = CGPathCreateMutable();
-  CGPathMoveToPoint(maskPath,    NULL, oX, oY);
-  CGPathAddLineToPoint(maskPath, NULL, oX+progress-radius, oY);
-  CGPathAddArcToPoint(maskPath,  NULL, oX+progress, oY, oX+progress, oY+6.75, radius);
-  CGPathAddArcToPoint(maskPath,  NULL, oX+progress, oY+13.5, oX+progress-radius, oY+13.5, radius);
-  CGPathAddLineToPoint(maskPath, NULL, oX+progress, oY+13.5);
-  CGPathAddLineToPoint(maskPath, NULL, oX, oY+13.5);
-  CGPathAddLineToPoint(maskPath, NULL, oX, oY);
+  CGPathMoveToPoint(maskPath,    NULL, 0.0, 0.0);
+  CGPathAddLineToPoint(maskPath, NULL, progress-radius, 0.0);
+  CGPathAddArcToPoint(maskPath,  NULL, progress, 0.0, progress, 6.75, radius);
+  CGPathAddArcToPoint(maskPath,  NULL, progress, 13.5, progress-radius, 13.5, radius);
+  CGPathAddLineToPoint(maskPath, NULL, progress, 13.5);
+  CGPathAddLineToPoint(maskPath, NULL, 0.0, 13.5);
+  CGPathAddLineToPoint(maskPath, NULL, 0.0, 0.0);
   CGPathCloseSubpath(maskPath);
 
   return maskPath;
 }
+
+- (void)progressNextStep
+{
+  if (_currentStep < 2) {
+    [self progressBarToStep:_currentStep+1 completion:nil];
+  }
+}
+
+- (void)progressPreviousStep
+{
+  if(_currentStep > 0) {
+    [self progressBarToStep:_currentStep-1 completion:nil];
+  }
+}
+
 
 - (void)progressBarToStep:(HISCurrentStep)step completion:(void (^)(void))handler
 {
   NSLog(@"%s %i", __FUNCTION__, step);
   
   [CATransaction begin];
-  [CATransaction setAnimationDuration:0.5];
+  [CATransaction setAnimationDuration:0.4];
   [CATransaction setCompletionBlock:^(void){
     _currentStep = step;
     [self performSelector:@selector(_updateStepLabelAndDot) withObject:nil afterDelay:0.2];
   }];
-  CGPathRef newMaskPath = [self _guageMaskPathInRect:self.frame progress:[self _progressForStep:step]];
+  CGPathRef newMaskPath = [self _guageMaskPathWithProgress:[self _progressForStep:step]];
   CGPathRef oldMaskPath = self.guageMaskLayer.path;
   self.guageMaskLayer.path = newMaskPath;
 
