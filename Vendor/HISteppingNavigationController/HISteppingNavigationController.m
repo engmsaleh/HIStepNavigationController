@@ -8,11 +8,14 @@
 
 #import "HISteppingNavigationController.h"
 
+#import "HIStepProgressBarView.h"
+
 @interface HISteppingNavigationController ()
 
 @property (strong, nonatomic) UIView *containerView;
 @property (strong, nonatomic) UIImageView *stepIndicator;
 @property (strong, nonatomic) NSMutableArray *viewControllers;
+@property (strong, nonatomic) HIStepProgressBarView *progressBarView;
 
 - (void)_confirmProtocolAdoption:(UIViewController *)viewController;
 - (CGRect)_stepIndicatorFrame:(CGFloat)xPos;
@@ -36,6 +39,7 @@
 @implementation HISteppingNavigationController
 
 @synthesize navigationBar = _navigationBar;
+@synthesize progressBarView = _progressBarView;
 @synthesize containerView = _containerView;
 @synthesize stepIndicator = _stepIndicator;
 @synthesize viewControllers = _viewControllers;
@@ -69,9 +73,13 @@
   [self.stepIndicator setFrame:CGRectMake(0, 43, 17, 9)];
   [self.navigationBar addSubview:self.stepIndicator];
   
+  self.progressBarView = [[HIStepProgressBarView alloc] initWithFrame:CGRectMake(0, 47.5, 320, 60)];
+  [self.navigationBar insertSubview:self.progressBarView belowSubview:self.stepIndicator];
+  
   self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 44.0, 320, CGRectGetHeight(self.view.frame)-44.0)];
   self.containerView.backgroundColor = [UIColor redColor];
   [self.view insertSubview:self.containerView belowSubview:self.navigationBar];
+  
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -89,12 +97,6 @@
   
   [rootVC didMoveToParentViewController:self];
   [self.containerView addSubview:rootVC.view];
-  
-  // remove later
-  UIImage *progressBar = [UIImage imageNamed:@"ProgoressBar"];
-  UIImageView *progressBarView = [[UIImageView alloc] initWithImage:progressBar];
-  progressBarView.frame = CGRectMake(0, 59, 320, 40);
-  [self.view insertSubview:progressBarView belowSubview:self.navigationBar];
 }
 
 - (void)viewDidUnload
@@ -117,6 +119,7 @@
 //  if(!animated){
 //    return;
 //  }
+  
   int count = [self.viewControllers count];
   UIViewController *currentViewController = [self.viewControllers objectAtIndex:count-1];
   

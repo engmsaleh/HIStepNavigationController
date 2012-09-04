@@ -24,6 +24,8 @@
 		6B8A75DB15F34F61001D7EB4 /* HISSecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8A75DA15F34F61001D7EB4 /* HISSecondStepViewController.m */; };
 		6B8A75E215F355D6001D7EB4 /* ProgoressBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75E015F355D6001D7EB4 /* ProgoressBar.png */; };
 		6B8A75E315F355D6001D7EB4 /* ProgoressBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8A75E115F355D6001D7EB4 /* ProgoressBar@2x.png */; };
+		6BD65D8715F5DEFE008FE1AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BD65D8615F5DEFE008FE1AC /* QuartzCore.framework */; };
+		6BD65D8C15F5DF23008FE1AC /* HIStepProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD65D8B15F5DF23008FE1AC /* HIStepProgressBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		6B8A75DA15F34F61001D7EB4 /* HISSecondStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HISSecondStepViewController.m; path = Classes/ViewControllers/HISSecondStepViewController.m; sourceTree = "<group>"; };
 		6B8A75E015F355D6001D7EB4 /* ProgoressBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ProgoressBar.png; path = Vendor/HISteppingNavigationController/Resources/Images/ProgoressBar.png; sourceTree = "<group>"; };
 		6B8A75E115F355D6001D7EB4 /* ProgoressBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ProgoressBar@2x.png"; path = "Vendor/HISteppingNavigationController/Resources/Images/ProgoressBar@2x.png"; sourceTree = "<group>"; };
+		6BD65D8615F5DEFE008FE1AC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6BD65D8A15F5DF23008FE1AC /* HIStepProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIStepProgressBarView.h; path = Classes/Views/HIStepProgressBarView.h; sourceTree = "<group>"; };
+		6BD65D8B15F5DF23008FE1AC /* HIStepProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIStepProgressBarView.m; path = Classes/Views/HIStepProgressBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD65D8715F5DEFE008FE1AC /* QuartzCore.framework in Frameworks */,
 				6B8A756D15F341B9001D7EB4 /* UIKit.framework in Frameworks */,
 				6B8A756F15F341B9001D7EB4 /* Foundation.framework in Frameworks */,
 				6B8A757115F341B9001D7EB4 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +95,7 @@
 		6B8A756B15F341B9001D7EB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BD65D8615F5DEFE008FE1AC /* QuartzCore.framework */,
 				6B8A756C15F341B9001D7EB4 /* UIKit.framework */,
 				6B8A756E15F341B9001D7EB4 /* Foundation.framework */,
 				6B8A757015F341B9001D7EB4 /* CoreGraphics.framework */,
@@ -157,6 +164,7 @@
 			children = (
 				6B8A759115F342F8001D7EB4 /* HISteppingNavigationController.h */,
 				6B8A759215F342F8001D7EB4 /* HISteppingNavigationController.m */,
+				6BD65D8915F5DF19008FE1AC /* Views */,
 				6B8A75D015F34BF5001D7EB4 /* Resources */,
 			);
 			name = HISteppingNavigationController;
@@ -186,6 +194,16 @@
 				6B8A75D415F34C1C001D7EB4 /* HISNavigationController_Bg@2x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6BD65D8915F5DF19008FE1AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BD65D8A15F5DF23008FE1AC /* HIStepProgressBarView.h */,
+				6BD65D8B15F5DF23008FE1AC /* HIStepProgressBarView.m */,
+			);
+			name = Views;
+			path = HIStepNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +282,7 @@
 				6B8A75CF15F34B3A001D7EB4 /* HISFirstStepViewController.m in Sources */,
 				6B8A75DB15F34F61001D7EB4 /* HISSecondStepViewController.m in Sources */,
 				6B41C97C15F3604B001CEC30 /* HISThirdStepViewController.m in Sources */,
+				6BD65D8C15F5DF23008FE1AC /* HIStepProgressBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
